@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2545">
+  <meta name="description" content="Professional portfolio for Mary Grace Y. Omac, U.S. CMA, with experience in bookkeeping, cost accounting, payroll, tax support, and financial reporting.">
+  <title>Mary Grace Y. Omac | Accounting &amp; Bookkeeping</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #0b2545;
+      --navy-soft: #17395f;
+      --amber: #d58a45;
+      --gold: #d4af37;
+      --ink: #1d2939;
+      --muted: #5e6b7b;
+      --paper: #f8f6f0;
+      --white: #ffffff;
+      --line: #dce3eb;
+      --green: #537e6c;
+      --shadow: 0 24px 70px rgba(11, 37, 69, .11);
+      --radius: 22px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.65; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .skip-link { position: absolute; top: -5rem; left: 1rem; z-index: 10; padding: .75rem 1rem; background: var(--white); color: var(--navy); border-radius: .5rem; }
+    .skip-link:focus { top: 1rem; }
+    .container { width: min(1160px, calc(100% - 3rem)); margin-inline: auto; }
+
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96); border-bottom: 1px solid rgba(11,37,69,.08); box-shadow: 0 3px 18px rgba(11,37,69,.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .header-row { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--navy); font-weight: 800; letter-spacing: -.025em; }
+    .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: var(--navy); color: var(--gold); font-family: Georgia, serif; font-size: 1.2rem; box-shadow: 0 5px 14px rgba(11,37,69,.17); }
+    .brand-name { display: grid; line-height: 1.12; }
+    .brand-name small { margin-top: .3rem; color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .nav { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 1.8rem); }
+    .nav a { color: #344256; font-size: .9rem; font-weight: 650; text-decoration: none; }
+    .nav a:hover, .nav a:focus-visible { color: var(--amber); }
+    .nav .nav-cta { padding: .72rem 1.1rem; border-radius: 999px; background: var(--amber); color: var(--white); box-shadow: 0 7px 18px rgba(213,138,69,.22); }
+    .nav .nav-cta:hover, .nav .nav-cta:focus-visible { background: var(--navy); color: var(--white); }
+
+    .hero { position: relative; overflow: hidden; padding: clamp(4rem, 8vw, 7rem) 0 4rem; background: linear-gradient(115deg, #fff 0%, #faf8f2 60%, #eef1f4 100%); }
+    .hero::before { content: ""; position: absolute; width: 460px; height: 460px; top: -260px; left: -180px; border: 1px solid rgba(212,175,55,.28); border-radius: 50%; box-shadow: 0 0 0 34px rgba(212,175,55,.035), 0 0 0 74px rgba(212,175,55,.025); }
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1.12fr .88fr; align-items: center; gap: clamp(3rem, 8vw, 7rem); }
+    .eyebrow { display: inline-flex; align-items: center; gap: .55rem; margin: 0 0 1.2rem; color: var(--navy-soft); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 5px rgba(83,126,108,.12); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 720px; margin-bottom: 1.25rem; color: var(--navy); font-size: clamp(2.7rem, 5.7vw, 5rem); font-weight: 820; letter-spacing: -.065em; line-height: 1.01; }
+    h1 span { color: var(--amber); }
+    .hero-copy { max-width: 620px; margin-bottom: 1.8rem; color: var(--muted); font-size: clamp(1.05rem, 1.5vw, 1.2rem); }
+    .hero-copy strong { color: var(--navy); }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem; margin-bottom: 2.4rem; }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: .55rem; min-height: 48px; padding: .8rem 1.25rem; border: 1px solid transparent; border-radius: 999px; background: var(--navy); color: var(--white); font-weight: 750; text-decoration: none; box-shadow: 0 9px 22px rgba(11,37,69,.16); transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); background: var(--navy-soft); }
+    .button.secondary { border-color: var(--line); background: var(--white); color: var(--navy); box-shadow: none; }
+    .button.secondary:hover { border-color: var(--gold); background: #fffaf0; }
+    .quick-facts { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 620px; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+    .fact { padding: 0 1.1rem; border-right: 1px solid var(--line); }
+    .fact:first-child { padding-left: 0; }
+    .fact:last-child { border: 0; }
+    .fact strong { display: block; color: var(--navy); font-size: 1.2rem; letter-spacing: -.03em; }
+    .fact span { display: block; margin-top: .2rem; color: var(--muted); font-size: .78rem; line-height: 1.4; }
+    .portrait-wrap { position: relative; width: min(100%, 420px); justify-self: end; }
+    .portrait-card { position: relative; overflow: hidden; padding: .7rem; border: 1px solid rgba(11,37,69,.1); border-radius: 32px; background: var(--white); box-shadow: var(--shadow); transform: rotate(1.2deg); }
+    .portrait-card img { width: 100%; aspect-ratio: 4 / 5; border-radius: 24px; object-fit: cover; object-position: center 30%; }
+    .portrait-caption { position: absolute; right: -20px; bottom: 40px; max-width: 235px; padding: .9rem 1.05rem; border: 1px solid rgba(11,37,69,.08); border-radius: 15px; background: var(--white); color: var(--navy); font-size: .82rem; font-weight: 750; line-height: 1.4; box-shadow: 0 12px 32px rgba(11,37,69,.14); transform: rotate(-1.2deg); }
+    .portrait-caption span { display: block; margin-top: .28rem; color: var(--muted); font-size: .72rem; font-weight: 500; }
+    .orbit { position: absolute; top: -25px; right: -20px; width: 82px; height: 82px; border: 1px solid rgba(212,175,55,.62); border-radius: 50%; }
+    .orbit::after { content: ""; position: absolute; top: 18px; right: 4px; width: 12px; height: 12px; border: 3px solid var(--paper); border-radius: 50%; background: var(--amber); }
+
+    .trust-strip { padding: 1.4rem 0; background: var(--navy); color: rgba(255,255,255,.88); }
+    .trust-row { display: flex; justify-content: space-between; align-items: center; gap: 1.2rem; }
+    .trust-label { color: var(--gold); font-size: .72rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .trust-items { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .65rem; }
+    .trust-items span { padding: .35rem .7rem; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; font-size: .78rem; font-weight: 650; }
+
+    section.content-section { padding: clamp(4rem, 7vw, 6.2rem) 0; }
+    .section-head { display: grid; grid-template-columns: .6fr 1.4fr; align-items: end; gap: 2rem; margin-bottom: 2.2rem; }
+    .section-index { margin-bottom: .55rem; color: var(--amber); font-size: .76rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    h2 { margin-bottom: 0; color: var(--navy); font-size: clamp(2rem, 3.8vw, 3.3rem); font-weight: 800; letter-spacing: -.055em; line-height: 1.08; }
+    .section-intro { max-width: 650px; margin-bottom: .15rem; color: var(--muted); font-size: 1.02rem; }
+
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .service-card { min-height: 225px; padding: 1.55rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .service-card:hover { transform: translateY(-4px); border-color: rgba(213,138,69,.55); box-shadow: 0 16px 38px rgba(11,37,69,.08); }
+    .service-icon { display: grid; width: 42px; height: 42px; place-items: center; margin-bottom: 1rem; border-radius: 13px; background: #fff4e8; color: #a65d25; font-size: 1.1rem; font-weight: 850; }
+    .service-card h3 { margin-bottom: .55rem; color: var(--navy); font-size: 1.08rem; letter-spacing: -.025em; }
+    .service-card p { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
+
+    .workflow { background: #eef2f6; }
+    .workflow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2.5rem; }
+    .step { position: relative; padding: 1.4rem 1.25rem 1.3rem; border-top: 2px solid rgba(11,37,69,.18); }
+    .step-number { display: inline-grid; width: 38px; height: 38px; place-items: center; margin-top: -2.25rem; margin-bottom: 1.2rem; border: 5px solid #eef2f6; border-radius: 50%; background: var(--navy); color: var(--gold); font-size: .68rem; font-weight: 850; }
+    .step h3 { margin-bottom: .5rem; color: var(--navy); font-size: 1.05rem; }
+    .step p { margin-bottom: 0; color: var(--muted); font-size: .87rem; }
+    .workflow-note { margin: 2rem 0 0; padding: 1rem 1.2rem; border-left: 3px solid var(--gold); border-radius: 0 12px 12px 0; background: rgba(255,255,255,.75); color: var(--muted); font-size: .86rem; }
+
+    .profile-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 1.3rem; align-items: stretch; }
+    .profile-card { padding: clamp(1.5rem, 3vw, 2.25rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+    .profile-card h3 { margin-bottom: 1rem; color: var(--navy); font-size: 1.35rem; letter-spacing: -.04em; }
+    .profile-card p { margin-bottom: 1rem; color: var(--muted); }
+    .profile-card p:last-child { margin-bottom: 0; }
+    .profile-points { display: grid; gap: .8rem; margin: 0; padding: 0; list-style: none; }
+    .profile-points li { display: flex; align-items: flex-start; gap: .65rem; color: var(--muted); font-size: .92rem; }
+    .check { flex: 0 0 auto; color: var(--green); font-weight: 900; }
+    .credential-panel { padding: clamp(1.5rem, 3vw, 2.25rem); border-radius: var(--radius); background: var(--navy); color: var(--white); box-shadow: var(--shadow); }
+    .credential-panel h3 { margin-bottom: .5rem; color: var(--white); font-size: 1.35rem; letter-spacing: -.04em; }
+    .credential-panel > p { margin-bottom: 1.3rem; color: rgba(255,255,255,.72); font-size: .9rem; }
+    .credential-list { display: flex; flex-wrap: wrap; gap: .55rem; }
+    .credential-list span { padding: .5rem .7rem; border: 1px solid rgba(255,255,255,.22); border-radius: 10px; background: rgba(255,255,255,.07); color: #fff; font-size: .8rem; font-weight: 700; }
+    .credential-list .highlight { border-color: rgba(212,175,55,.62); color: #f6d879; }
+    .credential-foot { margin-top: 1.4rem !important; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.16); font-size: .8rem !important; }
+
+    .closing { padding: clamp(4rem, 8vw, 6rem) 0; background: linear-gradient(125deg, var(--navy) 0%, #17395f 75%, #23496c 100%); color: var(--white); }
+    .closing-inner { display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+    .closing h2 { max-width: 700px; margin-bottom: .8rem; color: var(--white); }
+    .closing p { max-width: 680px; margin-bottom: 0; color: rgba(255,255,255,.76); }
+    .closing .button { flex: 0 0 auto; background: var(--amber); box-shadow: 0 12px 28px rgba(0,0,0,.18); }
+    .closing .button:hover { background: #e3a05d; }
+    footer { padding: 1.4rem 0; background: #081d36; color: rgba(255,255,255,.72); font-size: .78rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 1rem; }
+    footer a { color: var(--white); text-decoration-color: rgba(255,255,255,.45); text-underline-offset: 3px; }
+
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1.05fr .8fr; gap: 2.5rem; }
+      .nav { gap: .9rem; }
+      .nav a { font-size: .82rem; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .workflow-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2.7rem; }
+    }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 2rem, 560px); }
+      html { scroll-padding-top: 132px; }
+      .header-row { min-height: auto; flex-wrap: wrap; gap: .8rem; padding: 1rem 0; }
+      .nav { width: 100%; justify-content: space-between; gap: .55rem; overflow-x: auto; padding-bottom: .2rem; }
+      .nav a { white-space: nowrap; font-size: .77rem; }
+      .nav .nav-cta { padding: .58rem .8rem; }
+      .hero { padding-top: 3rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-copy { font-size: 1rem; }
+      .portrait-wrap { width: min(88%, 390px); justify-self: center; }
+      .portrait-caption { right: -10px; bottom: 30px; }
+      .quick-facts { gap: .45rem; }
+      .fact { padding-inline: .6rem; }
+      .fact strong { font-size: 1rem; }
+      .fact span { font-size: .7rem; }
+      .trust-row { align-items: flex-start; flex-direction: column; }
+      .trust-items { justify-content: flex-start; }
+      .section-head { grid-template-columns: 1fr; gap: .8rem; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: auto; }
+      .workflow-grid { grid-template-columns: 1fr; gap: 2.4rem; }
+      .profile-grid { grid-template-columns: 1fr; }
+      .closing-inner { align-items: flex-start; flex-direction: column; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+    @media print {
+      .site-header, .actions, .closing .button { display: none; }
+      body { background: white; }
+      .hero, .trust-strip, .workflow, .closing, footer { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .hero { padding-top: 1.5rem; }
+      .container { width: 100%; }
+      section.content-section { padding: 2rem 0; break-inside: avoid; }
+      .service-card, .profile-card, .credential-panel, .step { break-inside: avoid; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="Mary Grace Y. Omac, home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span class="brand-name">Mary Grace Y. Omac<small>Accounting &amp; bookkeeping</small></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#expertise">Expertise</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#credentials">Credentials</a>
+        <a class="nav-cta" href="mailto:marygraceomac@gmail.com">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">U.S. CMA · Accounting professional</p>
+          <h1 id="hero-title">Clarity in the books. <span>Confidence</span> in the next step.</h1>
+          <p class="hero-copy"><strong>Mary Grace Y. Omac</strong> brings 7+ years in bookkeeping, cost accounting, tax compliance, and financial reporting. She supports multiple U.S. HVAC and home-services contractors with accurate reconciliations, payroll, job costing, and month-end reporting.</p>
+          <div class="actions">
+            <a class="button" href="mailto:marygraceomac@gmail.com">Let's connect <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="Mary_Grace_Omac_ATS_Resume.pdf" target="_blank" rel="noopener">View résumé PDF <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="quick-facts" aria-label="Professional highlights">
+            <div class="fact"><strong>7+ years</strong><span>Accounting experience</span></div>
+            <div class="fact"><strong>U.S. clients</strong><span>HVAC &amp; home services</span></div>
+            <div class="fact"><strong>Month-end</strong><span>Close &amp; reporting</span></div>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <span class="orbit" aria-hidden="true"></span>
+          <div class="portrait-card">
+            <img src="Mary_Grace_Omac_Portfolio_Portrait.png" alt="Mary Grace standing and holding a MacBook, wearing a light floral blouse">
+          </div>
+          <div class="portrait-caption">Thoughtful with the details.<span>Practical in the process.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip" aria-label="Areas of experience">
+      <div class="container trust-row">
+        <div class="trust-label">Experience across</div>
+        <div class="trust-items"><span>Bookkeeping</span><span>Cost accounting</span><span>Tax support</span><span>Financial reporting</span></div>
+      </div>
+    </div>
+
+    <section class="content-section" id="expertise" aria-labelledby="expertise-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="section-index">01 / Areas of expertise</p><h2 id="expertise-title">Reliable support for the financial details.</h2></div>
+          <p class="section-intro">From accurate account records to useful reporting, Mary brings a careful, consistent approach to the work that helps teams understand their numbers.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon" aria-hidden="true">01</div><h3>Accounting &amp; month-end close</h3><p>Bank and credit card reconciliations, general ledger review, month-end close, and budgeting support.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">02</div><h3>Cost &amp; job costing</h3><p>Cost accounting, job-level profitability review, and expense control for home-services work.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">03</div><h3>Payroll support</h3><p>Payroll processing and review across multiple payroll platforms, with attention to clear supporting records.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">04</div><h3>Tax documentation</h3><p>Tax filing preparation support, documentation, and organized client tax records.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">05</div><h3>Reporting &amp; analysis</h3><p>Financial statements, cash flow review, and financial risk analysis to support clear conversations.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">06</div><h3>Audit support</h3><p>Audit preparation, inconsistency resolution, and internal audit policy support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section workflow" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="section-index">02 / A consistent approach</p><h2 id="approach-title">Small details, handled with care.</h2></div>
+          <p class="section-intro">A steady workflow makes it easier to catch discrepancies, keep records organized, and prepare reports that are easier to use.</p>
+        </div>
+        <div class="workflow-grid">
+          <article class="step"><span class="step-number">01</span><h3>Review the records</h3><p>Understand the accounts, source documents, and open questions before moving into close work.</p></article>
+          <article class="step"><span class="step-number">02</span><h3>Reconcile &amp; resolve</h3><p>Compare account activity, identify discrepancies, and follow through on items that need attention.</p></article>
+          <article class="step"><span class="step-number">03</span><h3>Connect costs to work</h3><p>Organize job costs and expenses so the financial picture reflects the work being performed.</p></article>
+          <article class="step"><span class="step-number">04</span><h3>Close &amp; communicate</h3><p>Prepare reporting and share clear updates with owners, managers, and clients.</p></article>
+        </div>
+        <p class="workflow-note">Typical work products include reconciled account records, month-end financial statements, cash flow reviews, job-costing summaries, tax-support documentation, and audit-ready schedules.</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="section-index">03 / Professional profile</p><h2 id="about-title">Careful accounting. Clear communication.</h2></div>
+          <p class="section-intro">A detail-oriented accounting professional who looks for the source of discrepancies and builds reusable tools to make team workflows faster and more consistent.</p>
+        </div>
+        <div class="profile-grid">
+          <article class="profile-card">
+            <h3>Experience at a glance</h3>
+            <p>Mary manages QuickBooks Online books for multiple U.S. HVAC and home-services contractors, supporting reconciliations, payroll, job costing, and month-end reporting.</p>
+            <p>Her background also includes cost accounting, tax compliance support, financial reporting, audit preparation, and communication with owners, managers, and clients.</p>
+            <ul class="profile-points">
+              <li><span class="check" aria-hidden="true">✓</span><span>QuickBooks Online bookkeeping for contractor businesses</span></li>
+              <li><span class="check" aria-hidden="true">✓</span><span>Multiple payroll platforms and tax-support documentation</span></li>
+              <li><span class="check" aria-hidden="true">✓</span><span>Reusable tools and consistent team workflows</span></li>
+            </ul>
+          </article>
+          <aside class="credential-panel" id="credentials" aria-labelledby="credentials-title">
+            <h3 id="credentials-title">Credentials &amp; certifications</h3>
+            <p>Professional designations and training listed in Mary’s résumé.</p>
+            <div class="credential-list">
+              <span class="highlight">CMA (U.S.)</span><span>CTT</span><span>MRIMAcc</span><span>MICB</span><span>RCA</span><span>CAT</span><span>CFMP</span><span>International Tax Assistant Level II</span><span>Intuit Bookkeeper — trained</span><span>QuickBooks Level 1 — certified</span>
+            </div>
+            <p class="credential-foot">U.S. CMA — Professional</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="contact-title">
+      <div class="container closing-inner">
+        <div><p class="section-index">04 / Contact</p><h2 id="contact-title">Let’s make the numbers easier to work with.</h2><p>For accounting, bookkeeping, or tax-support opportunities, reach Mary Grace by email.</p></div>
+        <a class="button" href="mailto:marygraceomac@gmail.com">marygraceomac@gmail.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-row"><span>© Mary Grace Y. Omac · Accounting &amp; Bookkeeping</span><a href="#top">Back to top ↑</a></div>
+  </footer>
+</body>
+</html>
