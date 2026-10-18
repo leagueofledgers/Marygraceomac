@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b2545">
-  <meta name="description" content="Professional portfolio for Mary Grace (MG) Y. Omac, U.S. CMA, with experience in bookkeeping, cost accounting, payroll, tax support, and financial reporting.">
-  <title>Mary Grace (MG) Y. Omac | Accounting &amp; Bookkeeping</title>
+  <meta name="description" content="Professional portfolio for Mary Grace Y. Omac, U.S. CMA, with experience in bookkeeping, cost accounting, payroll, tax support, and financial reporting.">
+  <title>Mary Grace Y. Omac | Accounting &amp; Bookkeeping</title>
   <style>
     :root {
       color-scheme: light;
@@ -120,6 +120,9 @@
     .credential-list { display: flex; flex-wrap: wrap; gap: .55rem; }
     .credential-list span { padding: .5rem .7rem; border: 1px solid rgba(255,255,255,.22); border-radius: 10px; background: rgba(255,255,255,.07); color: #fff; font-size: .8rem; font-weight: 700; }
     .credential-list .highlight { border-color: rgba(212,175,55,.62); color: #f6d879; }
+    .credential-list.designation-lines { display: grid; gap: .45rem; }
+    .designation-row { display: flex; flex-wrap: nowrap; gap: .45rem; }
+    .designation-row span { flex: 0 0 auto; padding: .42rem .58rem; font-size: .74rem; white-space: nowrap; }
     .credential-foot { margin-top: 1.4rem !important; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.16); font-size: .8rem !important; }
 
     .closing { padding: clamp(4rem, 8vw, 6rem) 0; background: linear-gradient(125deg, var(--navy) 0%, #17395f 75%, #23496c 100%); color: var(--white); }
@@ -164,6 +167,7 @@
       .workflow-grid { grid-template-columns: 1fr; gap: 2.4rem; }
       .profile-grid { grid-template-columns: 1fr; }
       .credential-badges { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .designation-row { flex-wrap: wrap; gap: .35rem; }
       .closing-inner { align-items: flex-start; flex-direction: column; }
       .footer-row { align-items: flex-start; flex-direction: column; }
     }
@@ -187,9 +191,9 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-row">
-      <a class="brand" href="#top" aria-label="Mary Grace (MG) Y. Omac, home">
-        <span class="brand-mark" aria-hidden="true">M</span>
-        <span class="brand-name">Mary Grace (MG) Y. Omac<small>Accounting &amp; bookkeeping</small></span>
+      <a class="brand" href="#top" aria-label="Mary Grace Y. Omac, home">
+        <span class="brand-mark" aria-hidden="true">MG</span>
+        <span class="brand-name">Mary Grace Y. Omac<small>Accounting &amp; bookkeeping</small></span>
       </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="#expertise">Expertise</a>
@@ -207,7 +211,7 @@
         <div>
           <p class="eyebrow">U.S. CMA · Accounting professional</p>
           <h1 id="hero-title">Clarity in the books. <span>Confidence</span> in the next step.</h1>
-          <p class="hero-copy"><strong>Mary Grace (MG) Y. Omac</strong> brings 7+ years in bookkeeping, cost accounting, tax compliance, and financial reporting. She supports multiple U.S. HVAC and home-services contractors with accurate reconciliations, payroll, job costing, and month-end reporting.</p>
+          <p class="hero-copy"><strong>Mary Grace Y. Omac</strong> brings 7+ years in bookkeeping, cost accounting, tax compliance, and financial reporting. She supports multiple U.S. HVAC and home-services contractors with accurate reconciliations, payroll, job costing, and month-end reporting.</p>
           <div class="actions">
             <a class="button" href="mailto:marygraceomac@gmail.com">Let's connect <span aria-hidden="true">↗</span></a>
             <a class="button secondary" href="Mary_Grace_Omac_ATS_Resume.pdf" target="_blank" rel="noopener">View résumé PDF <span aria-hidden="true">↓</span></a>
@@ -291,15 +295,16 @@
             <h4 class="credential-subtitle">Badges</h4>
             <div class="credential-badges" aria-label="Credential badges">
               <figure class="credential-badge"><img src="credential-cma.jpg" alt="Certified Management Accountant badge"><figcaption>Certified Management Accountant</figcaption></figure>
-              <figure class="credential-badge"><img src="credential-cfmp.jpg" alt="Certified Financial Management Professional badge"><figcaption>CFMP</figcaption></figure>
+              <figure class="credential-badge"><img src="credential-cfmp.jpg" alt="Certified Financial Management Professional badge"><figcaption>Certified Financial Management Professional</figcaption></figure>
               <figure class="credential-badge"><img src="credential-ima-analytics.jpg" alt="IMA Data Analytics and Visualization Fundamentals Certificate badge"><figcaption>Data Analytics &amp; Visualization Fundamentals</figcaption></figure>
               <figure class="credential-badge"><img src="credential-intuit-trained-bookkeeper.jpg" alt="Intuit Trained Bookkeeper badge"><figcaption>Intuit Trained Bookkeeper</figcaption></figure>
               <figure class="credential-badge"><img src="credential-quickbooks-proadvisor.jpg" alt="QuickBooks ProAdvisor badge"><figcaption>QuickBooks Online ProAdvisor</figcaption></figure>
               <figure class="credential-badge"><img src="credential-provider-accountant.jpg" alt="Certified Provider Accountant badge"><figcaption>Certified Provider Accountant</figcaption></figure>
             </div>
             <h4 class="credential-subtitle">Additional designations</h4>
-            <div class="credential-list" aria-label="Additional designations">
-              <span>CTT</span><span>MRIMAcc</span><span>MICB</span><span>RCA</span><span>CAT</span><span>International Tax Assistant Level II</span>
+            <div class="credential-list designation-lines" aria-label="Additional designations">
+              <div class="designation-row"><span>CTT</span><span>MRITax</span><span>International Tax Assistant Level II</span></div>
+              <div class="designation-row"><span>MRIMAcc</span><span>MICB</span><span>RCA</span><span>CAT</span><span>MAAT</span></div>
             </div>
           </aside>
         </div>
@@ -314,7 +319,7 @@
     </section>
   </main>
   <footer>
-    <div class="container footer-row"><span>© Mary Grace (MG) Y. Omac · Accounting &amp; Bookkeeping</span><a href="#top">Back to top ↑</a></div>
+    <div class="container footer-row"><span>© Mary Grace Y. Omac · Accounting &amp; Bookkeeping</span><a href="#top">Back to top ↑</a></div>
   </footer>
 </body>
 </html>
